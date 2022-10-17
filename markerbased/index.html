@@ -7,11 +7,11 @@
 
     <a-scene embedded arjs>
 
-        <a-marker preset="hiro">
-
-            <a-box position="0 0.5 0" material="color: yellow;"></a-box>
-
-        </a-marker>
+        <a-nft type="nft" url="../assets/nft" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
+            <!-- Define the GLTF model -->
+            <a-entity gltf-model="../assets/ceramic_cream_preserve_pot" scale="5 5 5" position="50 150 0">
+            </a-entity>
+          </a-nft>
 
         <a-entity camera></a-entity>
 
