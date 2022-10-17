@@ -30,21 +30,9 @@
   </div>
   <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
-    <!-- we use cors proxy to avoid cross-origin problems -->
-
-    <!--
-      ⚠️⚠️⚠️
-      https://arjs-cors-proxy.herokuapp.com/ is now offline, Heroku has dismissed all his free plans from November 2022.
-      You need to host your own proxy and use it instead. The proxy is based on CORS Anywhere (see https://github.com/Rob--W/cors-anywhere).
-      ⚠️⚠️⚠️
-    -->
-
-    <a-nft type="nft"
-      url="../assets/nft/Po"
-      smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
-      <a-entity
-        gltf-model="../assets/ceramic_cream_preserve_pot/scene.gltf"
-        scale="5 5 5" position="50 150 0">
+ 
+    <a-nft type="nft" url="/assets/nft/Po" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
+      <a-entity gltf-model="/assets/ceramic_cream_preserve_pot/scene.gltf" scale="5 5 5" position="50 150 0">
       </a-entity>
     </a-nft>
     <a-entity camera></a-entity>
@@ -53,6 +41,6 @@
 
 <script>
   window.addEventListener("arjs-nft-loaded", (event) => {
-  document.getElementById(arjsloader).style.display = "none";
-});
+    document.getElementById(arjsloader).style.display = "none";
+  });
 </script>
